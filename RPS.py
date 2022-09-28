@@ -1,6 +1,7 @@
 import random
 actions = ['Rock', 'Paper', 'Scissors']
-
+dante_turns = []
+vergil_turns = []
 
 while(True):
     dante_turn = input('Choose Dante action, or type exit: ')
@@ -9,6 +10,10 @@ while(True):
     if dante_turn == 'exit':
         print('Thank you for ... something')
         break
+    
+    dante_turns.append(dante_turn)
+    vergil_turns.append(vergil_turn)
+
 
     print(f'Dante:{dante_turn} versus Vergil:{vergil_turn}')
     if dante_turn == vergil_turn:
@@ -21,3 +26,7 @@ while(True):
         print('Dante defeated Vergil')
     else:
         print('Saul Goodman 3D')
+    
+print(f'You have played {len(dante_turns)} times')
+print(dante_turns)
+print(vergil_turns)
